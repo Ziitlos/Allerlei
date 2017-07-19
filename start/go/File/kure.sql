@@ -1,32 +1,4 @@
-use helsana_prod
-go
-
-select
-	  u.Id as UserId
-	, u.FirstName
-	, u.EMailState
-	, ur.Name as UserRoleName
-	, u.HelsanaEmployee
-from dbo.HelsanaUsers u
-inner join dbo.UserRoles ur
-	on ur.Id = u.UserRoleId
-	and ur.Deleted = 0
-	and u.Deleted = 0
-order by u.Id
-
-
---////////////////////////////////////////
-
-select *
-from dbo.HelsanaUsers u,
-     dbo.UserRoles ur
-where ur.Id = u.UserRoleId
-and ur.Deleted = 0
-and u.Deleted = 0
-order by u.Id
-
-
---////////////////////////////////////////
+-- kure.sql
 
 select u.Id,
 u.UserName,
