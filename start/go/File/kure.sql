@@ -1,4 +1,4 @@
 -- kure.sql
 
 select *
-from tabelle
+from kure
